@@ -9,14 +9,14 @@ stage('checkout'){
 
 steps{
 
-checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/lakshmansrikanth123/task6_task7.git']])
+checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[https://github.com/ROGAN07sg/task6-7.git]])
 }
 post {
                 success {
                     emailext(
                         subject: "checkout Success",
                         body: "checkout completed",
-                        to: "srikanth.korla225@gmail.com"
+                        to: "shekhargupta349@gmail.com"
                     )
                 }
             }
@@ -34,7 +34,7 @@ post {
                     emailext(
                         subject: "cleanpackage Success",
                         body: "cleanpackage completed",
-                        to: "srikanth.korla225@gmail.com"
+                        to: "shekhargupta349@gmail.com"
                     )
                 }
             }
@@ -44,7 +44,7 @@ post {
 stage('build_img'){
 
 steps{
- sh 'docker build -t srikanthimg .'
+ sh 'docker build -t sekharimg .'
 
 }
 
@@ -53,7 +53,7 @@ steps{
 stage('tag_img'){
 
 steps{
- sh 'docker tag srikanthimg varsha0411/srikanthimg:v1'
+ sh 'docker tag sekharimg rogan07sg/sekharimg:v1'
 
 }
 
@@ -73,7 +73,7 @@ stage('Login to Docker Hub') {
 stage('docker_push'){
 
 steps{
- sh 'docker push varsha0411/srikanthimg:v1'
+ sh 'docker push rogan07sg/sekharimg:v1'
 
 }
 
