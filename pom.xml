@@ -27,11 +27,11 @@ aven.apache.org/xsd/maven-4.0.0.xsd">
 <distributionManagement>
     <repository>
         <id>nexus-releases</id>
-        <url>http://<13.126.97.137>:8081/repository/maven-releases/</url>
+        <url>http://13.126.97.137:8081/repository/maven-releases/</url>
     </repository>
     <snapshotRepository>
         <id>nexus-snapshots</id>
-        <url>http://<13.126.97.137>:8081/repository/maven-snapshots/</url>
+        <url>http://13.126.97.137:8081/repository/maven-snapshots/</url>
     </snapshotRepository>
 </distributionManagement>
 
